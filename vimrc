@@ -79,6 +79,10 @@ if executable('ag')
 endif
 
 " Color scheme
+if has('gui_running')
+  set guifont=Source\ Code\ Pro\ Light\ 9
+endif
+set background=dark
 colorscheme solarized
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -125,6 +129,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+let g:rspec_command = "Dispatch bundle exec spring rspec {spec}"
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>

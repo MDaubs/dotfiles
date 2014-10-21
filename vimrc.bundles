@@ -30,6 +30,9 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-rbenv'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
